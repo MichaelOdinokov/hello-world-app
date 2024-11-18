@@ -6,7 +6,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("hello-world-app:${env.BUILD_ID}")
+                    dockerImage = docker.build("wiseng/hello-world-app")
                 }
             }
         }
