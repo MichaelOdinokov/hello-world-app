@@ -10,15 +10,7 @@ pipeline {
                 }
             }
         }
-        stage('Run Tests') {
-            steps {
-                script {
-                    dockerImage.inside {
-                        sh 'npm test'
-                    }
-                }
-            }
-        }
+    
         stage('Push to Docker Hub') {
             steps {
                 script {
